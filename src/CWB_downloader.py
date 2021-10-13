@@ -37,9 +37,11 @@ class CWB_downloader:
         cwb_data = []
         date_start = self.date_start
         date_delta = self.time_period
+        stn = self.stn
+        st_name = urllib.parse.quote(urllib.parse.quote(self.st_name))
         for d in range(date_delta):
             date = date_start + datetime.timedelta(days=d)
-            html_df = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station=466920&stname=%25E8%2587%25BA%25E5%258C%2597&datepicker={date}")[1]
+            html_df = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station={stn}&stname={st_name}&datepicker={date}")[1]
             html_df.columns = [i[2] for i in np.array(html_df.columns)]
             html_df.insert(loc=0, column="Date", value=date)
             cwb_data.append(html_df)
