@@ -36,6 +36,8 @@ Use a for-loop to download the rest data of 2020.
 Check the weather data with a chain chart.
 ![chain chart](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_plot.PNG)
 
+Now, you have the hourly data of 2020 at Taipei for analysis and advanced application to other fields.
+
 ## Author
 [@Jacky Weng](https://github.com/JackyWeng526)
 
