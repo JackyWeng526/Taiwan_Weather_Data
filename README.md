@@ -21,8 +21,8 @@ Then, you will gather the data of 2020-01-01 at Taipei station.
 * The Mandarin characters in the station name must be transcoded twice with urllib.
 
 ```bash
-  stnum = CWB_meta_df.iloc[4, 0]
-  stname = urllib.parse.quote(urllib.parse.quote(CWB_meta_df.iloc[4, 1]))
+  stnum = 466920
+  stname = urllib.parse.quote(urllib.parse.quote("臺北"))
   date = datetime.date(2020, 1, 1)
   
   html_data = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station={stnum}&stname={stname}&datepicker={date}")
