@@ -9,10 +9,33 @@ Install python libraries with requirements.txt in src folder.
 ```
 
 ## Weather Station Information
-You can reach the information table on [CWB e-service](https://e-service.cwb.gov.tw/wdps/obs/state.htm).
+You can reach the information table of CWB stations on [CWB e-service](https://e-service.cwb.gov.tw/wdps/obs/state.htm).
 Get the station number and the station name you need.
+![information table](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/station_info_table.PNG)
 
+## Read hourly weather data
+Take the date-time, station number and the station name with the url below.
+Then, you will gather the data of 2020-01-01 at Taipei station.
+* The Mandarin characters in the station name must be transcoded twice with urllib.
 
-![App Screenshot](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_2020_table.PNG)
+```bash
+  stnum = CWB_meta_df.iloc[4, 0]
+  stname = urllib.parse.quote(urllib.parse.quote(CWB_meta_df.iloc[4, 1]))
+  date = datetime.date(2020, 1, 1)
+  
+  html_data = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station={stnum}&stname={stname}&datepicker={date}")
+```
+![hourly data](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_20200101_table.PNG)
 
-[CWB Observation Data Inquire System](https://e-service.cwb.gov.tw/HistoryDataQuery/) .
+## Gather annual data
+Use a for-loop to download the rest data of 2020.
+![annual data](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_2020_table.PNG)
+
+Check the weather data with a chain chart.
+![chain chart](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_plot.PNG)
+
+## Author
+[@Jacky Weng](https://github.com/JackyWeng526)
+
+## Reference
+[CWB Observation Data Inquire System](https://e-service.cwb.gov.tw/HistoryDataQuery/).
