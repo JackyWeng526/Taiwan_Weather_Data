@@ -25,10 +25,11 @@ Get the station number and the station name you need.
 ![information table](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/station_info_table.PNG)
 
 ## Read hourly weather data
-Take the date-time, station number and the station name with the url below.
+Take the date-time, station number, altitude, and the station name with the url below.
 
 Then, you will gather the data of 2020-01-01 at Taipei station.
 * The Mandarin characters in the station name must be transcoded twice with urllib.
+* There is some problems with requests library for merging the url, so using F-string here.
 
 ```bash
   stnum = "466920"
