@@ -5,7 +5,7 @@ import os
 
 # Create path and list website link
 BATH_PATH = os.path.dirname(os.path.abspath(__file__))
-DATA_PATH = os.path.join(BATH_PATH, "..", "data")
+ETC_PATH = os.path.join(BATH_PATH, "..", "etc")
 webpage = "https://e-service.cwb.gov.tw/wdps/obs/state.htm"
 
 
@@ -21,7 +21,7 @@ display(html_df)
 
 
 # %% Save as csv file 
-html_df.to_csv(os.path.join(DATA_PATH, "CWB_meta.csv"))
+html_df.to_csv(os.path.join(ETC_PATH, "CWB_meta.csv"))
 
 
 # %% Save as json file
@@ -29,9 +29,9 @@ html_dict = html_df.to_dict()
 display(html_dict)
 
 # Decode Mandarin characters 
-with open(os.path.join(DATA_PATH, "CWB_meta_decode.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(ETC_PATH, "CWB_meta_decode.json"), "w", encoding="utf-8") as f:
     json.dump([html_dict], f, ensure_ascii=False)
 
 # For Ascii of Mandarin characters
-with open(os.path.join(DATA_PATH, "CWB_meta.json"), "w", encoding="utf-8") as f:
+with open(os.path.join(ETC_PATH, "CWB_meta.json"), "w", encoding="utf-8") as f:
     json.dump([html_dict], f)
