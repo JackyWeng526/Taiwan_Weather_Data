@@ -11,6 +11,16 @@ Install python libraries with requirements.txt in src folder.
 ## Weather Station Information
 You can reach the information table of CWB stations on [CWB e-service](https://e-service.cwb.gov.tw/wdps/obs/state.htm).
 
+Or you can also extract the table as following:
+
+```bash
+  webpage = "https://e-service.cwb.gov.tw/wdps/obs/state.htm"
+  read_html = pd.read_html(webpage)
+  html_table = read_html[0]
+  html_df = html_table.loc[:, ["站號", "站名", "海拔高度(m)", "城市", "經度", "緯度", "地址"]]
+  display(html_df)
+```
+
 Get the station number and the station name you need.
 ![information table](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/station_info_table.PNG)
 
