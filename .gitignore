@@ -131,3 +131,5 @@ dmypy.json
 # ipynb, html
 src/*.html
 src/*.ipynb
+*.html
+*.ipynb
