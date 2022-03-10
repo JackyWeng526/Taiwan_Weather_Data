@@ -21,11 +21,12 @@ Then, you will gather the data of 2020-01-01 at Taipei station.
 * The Mandarin characters in the station name must be transcoded twice with urllib.
 
 ```bash
-  stnum = 466920
+  stnum = "466920"
   stname = urllib.parse.quote(urllib.parse.quote("臺北"))
   date = datetime.date(2020, 1, 1)
+  altitude = "1017.5m"
   
-  html_data = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station={stnum}&stname={stname}&datepicker={date}")
+  html_data = pd.read_html(F"https://e-service.cwb.gov.tw/HistoryDataQuery/DayDataController.do?command=viewMain&station={stnum}&stname={stname}&datepicker={date}&altitude={altitude}")
 ```
 ![hourly data](https://github.com/JackyWeng526/Taiwan_Weather_Data/blob/main/docs/Taipei_weather_data_20200101_table.PNG)
 
