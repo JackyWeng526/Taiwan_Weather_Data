@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # ipynb, html
-/src/*.html
-/src/*.ipynb
+src/*.html
+src/*.ipynb
