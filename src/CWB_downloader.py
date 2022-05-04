@@ -59,6 +59,6 @@ class CWB_downloader:
 
 if __name__ == "__main__":
     station_number = 466920
-    date_start = datetime.date(2022, 1, 1)
-    date_end = datetime.date(2022, 1, 2)
+    date_start = datetime.date(2022, 4, 1)
+    date_end = datetime.date(2022, 4, 20)
     CWB_downloader(station_number, date_start, date_end).data_saver()
