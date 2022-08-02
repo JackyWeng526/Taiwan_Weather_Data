@@ -53,7 +53,7 @@ Now, you have the hourly data of 2020 at Taipei for analysis and advanced applic
 ## WebAPI Service Test
 This repository is recently packaged as a WebAPI for test.
 
-You can try this: [@Taiwan Weather Downloader API]([https://github.com/JackyWeng526](https://microclimatecomforttaiwan.herokuapp.com/docs#/))
+You can try this: [@Taiwan Weather Downloader API](https://microclimatecomforttaiwan.herokuapp.com/docs#/)
 
 If there are any questions/problems for using the API, please don't hesitate to contact me.
 
