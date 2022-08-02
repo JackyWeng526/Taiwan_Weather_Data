@@ -51,11 +51,11 @@ Check the weather data with a chain chart.
 Now, you have the hourly data of 2020 at Taipei for analysis and advanced application to other fields.
 
 ## WebAPI Service Test
-This repository is recently packaged as a WebAPI for test.
+This repository is recently packaged as a WebAPI for a test.
 
-You can try this: [@Taiwan Weather Downloader API](https://microclimatecomforttaiwan.herokuapp.com/docs#/)
+You can try the WebAPI here: [@Taiwan Weather Downloader API](https://microclimatecomforttaiwan.herokuapp.com/docs#/)
 
-If there are any questions/problems for using the API, please don't hesitate to contact me.
+If there are any questions/problems with using the API, please don't hesitate to contact me.
 
 
 ## Author
